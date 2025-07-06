@@ -161,13 +161,13 @@ body {
   }
 }
 .logo {
-  font-size: 1.28rem;
-  font-weight: 700;
-  color: var(--color-main);
-  letter-spacing: 1px;
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
+ font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-main);
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
 }
 .nav-links {
   display: flex;
