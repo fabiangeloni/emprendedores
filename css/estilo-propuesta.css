@@ -690,6 +690,8 @@ footer {
   margin-bottom: 0.5em;
   scroll-snap-type: x mandatory;
   justify-content: center;
+  overflow-x: auto;
+  min-height: 150px !important;
 }
 .gallery-modal-gallery img {
   width: 180px;
