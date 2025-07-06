@@ -687,6 +687,7 @@ footer {
   padding: 0 1.2rem 0.7em 1.2rem;
   margin-bottom: 0.5em;
   scroll-snap-type: x mandatory;
+  justify-content: center;
 }
 .gallery-modal-gallery img {
   width: 180px;
