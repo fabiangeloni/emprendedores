@@ -70,7 +70,7 @@
         <div class="benefit-card">
           <i class="fa-solid fa-bullhorn"></i>
           <h3>Difusión que amplifica tu voz</h3>
-          <p>Dale visibilidad real a tu emprendimiento: lo promocionamos en radios, redes sociales y medios locales para que más personas te conozcan y se animen a elegirte.</p>
+          <p>Dale visibilidad real a tu emprendimiento: promocionamos la guía en radios, redes sociales y medios locales para que más personas te conozcan y se animen a elegirte.</p>
         </div>
         <div class="benefit-card">
           <i class="fa-solid fa-users"></i>
@@ -120,7 +120,7 @@
       data-category="Gastronomía"
       data-description="La Dulcería ofrece deliciosos productos artesanales, dulces y pastelería hecha con recetas familiares y productos locales. ¡Endulzá tu día con nosotros!"
       data-photos='["https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80"]'
-      data-contact='{"tel":"2473467675","email":"dulceria@email.com","web":"https://ladulceria.com"}'>
+      data-contact='{"tel":"2473467675","email":"dulceria@email.com","social":"ladulceria"}'>
       <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=300&q=80" alt="Productos de La Dulcería" />
       <div class="gallery-info">
         <h4>La Dulcería</h4>
@@ -132,7 +132,7 @@
       data-category="Artesanías"
       data-description="Artesanías Colón produce piezas únicas en madera, tejidos y cerámica, fusionando tradición con diseño moderno. Regalos y objetos con historia."
       data-photos='["https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80"]'
-      data-contact='{"tel":"3456-333444","email":"artescol@email.com","web":"https://artesaniascolon.com"}'>
+      data-contact='{"tel":"3456-333444","email":"artescol@email.com","social":"artesaniascolon","web":"https://artesaniascolon.com"}'>
       <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=300&q=80" alt="Productos de Artesanías Colón" />
       <div class="gallery-info">
         <h4>Artesanías Colón</h4>
@@ -144,7 +144,7 @@
       data-category="Gastronomía"
       data-description="Sabores del Río es una propuesta de platos regionales y conservas caseras, inspirados en la cultura y los ingredientes del Litoral."
       data-photos='["https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=800&q=80,"]'
-      data-contact='{"tel":"3456-111222","email":"sabores@email.com","web":"https://saboresdelrio.com"}'>
+      data-contact='{"tel":"3456-111222","email":"sabores@email.com","social":"saboresdelrio"}'>
       <img src="https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&w=300&q=80" alt="Productos de Sabores del Río" />
       <div class="gallery-info">
         <h4>Sabores del Río</h4>
@@ -156,7 +156,7 @@
       data-category="Comercio sustentable"
       data-description="EcoMercado te acerca productos orgánicos y sustentables de productores locales. Cuidamos tu salud y el ambiente."
       data-photos='["https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80"]'
-      data-contact='{"tel":"3456-888999","email":"eco@email.com","web":"https://ecomercado.com"}'>
+      data-contact='{"tel":"3456-888999","email":"eco@email.com","social":"ecomercado","web":"https://ecomercado.com"}'>
       <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=300&q=80" alt="EcoMercado" />
       <div class="gallery-info">
         <h4>EcoMercado</h4>
@@ -315,7 +315,8 @@
       contactDiv.innerHTML = '';
       if (contact.tel) contactDiv.innerHTML += `<span><i style="float: left;margin-right: 5px;font-size: 1.2em;color: #282829;" class="fab fa-whatsapp"></i> <a href="https://wa.me/549${contact.tel}?text=Hola%20!%20Vi%20tus%20datos%20en%20la%20web%20de%20Emprendedores,%20quisiera%20hacerte%20una%20consulta.">${contact.tel}</a></span>`;
       if (contact.email) contactDiv.innerHTML += `<span><i style="float: left;margin-right: 5px;font-size: 1.2em;color: #282829;" class="fa-solid fa-envelope"></i> <a href="mailto:${contact.email}">${contact.email}</a></span>`;
-      if (contact.web) contactDiv.innerHTML += `<span><i style="float: left;margin-right: 5px;font-size: 1.2em;color: #282829;" class="fab fa-instagram"></i> <a href="${contact.web}" target="_blank">${contact.web.replace(/^https?:\/\//, '')}</a></span>`;
+      if (contact.social) contactDiv.innerHTML += `<span><i style="float: left;margin-right: 5px;font-size: 1.2em;color: #282829;" class="fab fa-instagram"></i> <a href="http://www.instagram.com/${contact.social}" target="_blank">${contact.social.replace(/^https?:\/\//, '')}</a></span>`;
+      if (contact.web) contactDiv.innerHTML += `<span style="display:none"><i style="float: left;margin-right: 5px;font-size: 1.2em;color: #282829;" class="fab fa-instagram"></i> <a href="${contact.web}" target="_blank">${contact.web.replace(/^https?:\/\//, '')}</a></span>`;
       // Botón web
       const webBtn = document.getElementById('gallery-modal-web');
       if (contact.web) {
