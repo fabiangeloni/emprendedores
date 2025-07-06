@@ -626,6 +626,7 @@ footer {
   opacity: 1;
   pointer-events: none;
   outline: none;
+  padding-top: 30px;
 }
 .gallery-modal.open {
   bottom: 0;
