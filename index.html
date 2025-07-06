@@ -120,7 +120,7 @@
       data-category="Gastronomía"
       data-description="La Dulcería ofrece deliciosos productos artesanales, dulces y pastelería hecha con recetas familiares y productos locales. ¡Endulzá tu día con nosotros!"
       data-photos='["https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80"]'
-      data-contact='{"tel":"3456-222333","email":"dulceria@email.com","web":"https://ladulceria.com"}'>
+      data-contact='{"tel":"2473467675","email":"dulceria@email.com","web":"https://ladulceria.com"}'>
       <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=300&q=80" alt="Productos de La Dulcería" />
       <div class="gallery-info">
         <h4>La Dulcería</h4>
@@ -313,9 +313,9 @@
       try { contact = JSON.parse(card.dataset.contact); } catch {}
       const contactDiv = document.getElementById('gallery-modal-contact');
       contactDiv.innerHTML = '';
-      if (contact.tel) contactDiv.innerHTML += `<span>Tel: <a href="tel:${contact.tel}">${contact.tel}</a></span>`;
-      if (contact.email) contactDiv.innerHTML += `<span>Email: <a href="mailto:${contact.email}">${contact.email}</a></span>`;
-      if (contact.web) contactDiv.innerHTML += `<span>Web: <a href="${contact.web}" target="_blank">${contact.web.replace(/^https?:\/\//, '')}</a></span>`;
+      if (contact.tel) contactDiv.innerHTML += `<span><i style="float: left;margin-right: 5px;font-size: 1.2em;color: #282829;" class="fab fa-whatsapp"></i> <a href="https://wa.me/549${contact.tel}?text=Hola%20!%20Vi%20tus%20datos%20en%20la%20web%20de%20Emprendedores,%20quisiera%20hacerte%20una%20consulta.">${contact.tel}</a></span>`;
+      if (contact.email) contactDiv.innerHTML += `<span><i style="float: left;margin-right: 5px;font-size: 1.2em;color: #282829;" class="fa-solid fa-envelope"></i> <a href="mailto:${contact.email}">${contact.email}</a></span>`;
+      if (contact.web) contactDiv.innerHTML += `<span><i style="float: left;margin-right: 5px;font-size: 1.2em;color: #282829;" class="fab fa-instagram"></i> <a href="${contact.web}" target="_blank">${contact.web.replace(/^https?:\/\//, '')}</a></span>`;
       // Botón web
       const webBtn = document.getElementById('gallery-modal-web');
       if (contact.web) {
