@@ -691,11 +691,11 @@ footer {
   scroll-snap-type: x mandatory;
   justify-content: center;
   overflow-x: auto;
-  min-height: 150px !important;
+  min-height: 180px !important;
 }
 .gallery-modal-gallery img {
-  width: 180px;
-  height: 120px;
+  width: 140px;
+  height: 160px;
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 2px 12px rgba(30,32,36,0.07);
