@@ -214,7 +214,7 @@ body {
 
 .hero-bg {
   /* Degradado con color y opacidad, encima de la imagen */
-  background: linear-gradient(100deg, rgba(255,90,95,0.75) 0%, rgba(0,166,153,0.75) 100%);
+  background: linear-gradient(180deg, rgb(0 0 0 / 45%) 30%, rgba(0, 166, 153, 0.45) 100%);
   opacity: 1;
   position: absolute;
   inset: 0;
@@ -245,9 +245,9 @@ body {
   font-size: 2.1rem;
 }
 .hero p {
-  font-size: 1.15rem;
+  font-size: 0.9rem;
   margin-bottom: 2rem;
-  color: var(--color-text);
+  color: #ffffff;
 }
 .btn-main {
   display: inline-flex;
@@ -316,7 +316,7 @@ body {
   transform: translateY(-5px) scale(1.04);
 }
 .step-icon {
-  background: linear-gradient(100deg, var(--color-main) 0%, var(--color-accent) 100%);
+  background: var(--color-accent);
   color: var(--color-white);
   font-size: 2.2rem;
   border-radius: 50%;
