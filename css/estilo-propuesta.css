@@ -168,6 +168,8 @@ body {
     align-items: center;
     gap: 0.3em;
 }
+
+.logo img{height:55px; width:auto}
 .nav-links {
   display: flex;
   align-items: center;
@@ -244,7 +246,7 @@ body {
   font-size: 2.1rem;
 }
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1.0rem;
   margin-bottom: 2rem;
   color: #ffffff;
 }
