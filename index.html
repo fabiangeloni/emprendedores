@@ -14,7 +14,7 @@
     <div class="navbar-container">
       <div class="logo"><img src="img/microemprendedores-logo.png" alt="microemprendedores logo"></div>
       <!-- Botón Hamburguesa -->
-      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Abrir menú" />
+      <input type="checkbox" id="nav-toggle"  class="nav-toggle" aria-label="Abrir menú" />
       <label for="nav-toggle" class="hamburger" aria-label="Abrir menú">
         <span></span>
         <span></span>
@@ -23,7 +23,6 @@
       <ul class="nav-links">
         <li><a href="#como-sumarse">¿Cómo&nbsp;sumarte?</a></li>
         <li><a href="#beneficios">Beneficios</a></li>
-        <li><a href="#galeria">Galería</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#preinscripcion" class="nav-cta"><i class="fa-solid fa-user-plus"></i> Sumate</a></li>
       </ul>
@@ -34,8 +33,8 @@
   <header class="hero">
     <div class="hero-bg"></div>
     <div class="hero-content">
-      <h1>Transformá tu proyecto en una historia de éxito.<br /><span>Conectá. Inspirate. Crecé.</span></h1>
-      <p>Unite a la comunidad que impulsa el talento local, conecta personas y multiplica oportunidades. Súmate gratis y descubrí todo lo que podés lograr.</p>
+      <h1>Título propuesta de valor<br /><span>Texto secundario palabras clave.</span></h1>
+      <p>Acá va un texto descriptivo breve pero debe tener palabras claves para los buscadores, y a la vez persuadir al emprendedor.</p>
       <a href="#preinscripcion" class="btn-main hero-cta"><i class="fa-solid fa-arrow-right"></i> Quiero ser parte</a>
     </div>
   </header>
@@ -111,7 +110,7 @@
       </div>
     </section>-->
 
-    <!-- GALERÍA -->
+    <!-- GALERÍA 
     <section class="section gallery-section" id="galeria">
   <h2><i class="fa-solid fa-images"></i> Descubrí proyectos que ya forman parte</h2>
   <div class="gallery-grid">
@@ -165,7 +164,7 @@
     </div>
   </div>
 
-  <!-- Modal tipo Bottom Sheet -->
+  
   <div id="gallery-modal-backdrop" class="gallery-modal-backdrop"></div>
   <div id="gallery-modal" class="gallery-modal" tabindex="-1">
     <button class="gallery-modal-close" id="gallery-modal-close" aria-label="Cerrar modal">
@@ -186,7 +185,7 @@
       </div>
     </div>
   </div>
-</section>
+</section>-->
 
 
     <!-- FAQ -->
@@ -223,13 +222,19 @@
     <!-- PREINSCRIPCIÓN -->
     <section class="section pre-registration" id="preinscripcion">
       <h2><i class="fa-solid fa-user-plus"></i> Preinscribite y empezá tu camino</h2>
-      <form class="pre-form">
+      <form class="pre-form" action="https://formsubmit.co/fabiangeloni@gmail.com" method="POST"></form>
         <input type="text" placeholder="Nombre del emprendimiento" required />
         <input type="text" placeholder="Rubro o productos" required />
         <input type="email" placeholder="Email de contacto" required />
         <input type="tel" placeholder="WhatsApp o teléfono" required />
         <textarea placeholder="Contanos qué te inspira, cómo nació tu emprendimiento y qué te gustaría lograr siendo parte de la red."></textarea>
+        <label>
+          <input type="checkbox" name="terminos" required>
+          Acepto los términos y condiciones
+        </label>
         <button type="submit" class="btn-main"><i class="fa-solid fa-paper-plane"></i> Enviar preinscripción</button>
+        <input type="hidden" name="_next" value="https://microemprendedores.com.ar/gracias.html"> <!-- redirige después de enviar -->
+            <input type="hidden" name="_captcha" value="false"> <!-- desactiva CAPTCHA -->
       </form>
       <div class="countdown" aria-live="polite" aria-atomic="true">
         Preinscripción abierta por: <span id="countdown-timer">Cargando...</span>
@@ -357,5 +362,18 @@
     document.getElementById('gallery-modal-gallery').innerHTML = '';
   }
 </script>
+
+<script>
+  // buscamos el checkbox del menú hamburguesa
+  const menuToggle = document.querySelector("#nav-toggle");
+  const menuLinks = document.querySelectorAll(".navbar a");
+
+  menuLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      menuToggle.checked = false; // desmarca el checkbox → se cierra el menú
+    });
+  });
+</script>
+
 </body>
 </html>
